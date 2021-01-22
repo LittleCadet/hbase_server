@@ -20,7 +20,7 @@
    # 用tr将字符串按指定规则转换为数组
    arr=(`echo $str | tr '_' ' '`)
    #echo 'rowkey:'${arr[0]}',column:'${arr[1]}
-   # 调用delete删除hbase中的数据
+   # 准备hbase的delete语句
    echo "delete '${table}', '${arr[0]}','${arr[1]}'"
    dealCount=`expr $dealCount + 1`
    #echo "已处理数据:"$dealCount
