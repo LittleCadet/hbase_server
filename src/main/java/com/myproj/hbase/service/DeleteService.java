@@ -26,7 +26,7 @@ import java.util.Objects;
 /**
  * 背景： 应用异常停止 告警不准确
  * 原因： agentEvent的应用异常停止告警：由于hbase中的有脏数据：导致原逻辑： appName去ApplicationIndex表中查找agentId,在根据agentId去AgentInfo表查找agentInfo信息。但是原来的
- * 容器的agentId被改动过，导致hbase中有脏数据。从而导致告警不准确。
+ * 容器的agentId被改动过，导致hbase中有脏数据。从而导致告警不准确
  *
  * 备注：
  * 运行程序后，最好使用：flush + major_compact 持久化并合并hdfs的dataFile
